@@ -399,6 +399,8 @@ advApp.controller('advController', ['$document', '$filter', '$scope', function($
         tempPlanet.investments = deepCopy(loc.investments);
         tempPlanet.investments[i][1] += inc[j];
         calcState(tempPlanet);
+        if (tempPlanet.totalMoneyPerSecond <= loc.totalMoneyPerSecond)
+          continue;
         tempUnlock = calcUnlockCost(loc, i, loc.investments[i][1], inc[j]);
         tempUnlockTime = tempUnlock / loc.totalMoneyPerSecond;
         tempPercentageIncrease = (tempPlanet.totalMoneyPerSecond - loc.totalMoneyPerSecond) * 100 / loc.totalMoneyPerSecond;
