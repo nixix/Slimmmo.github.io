@@ -851,6 +851,8 @@ advApp.controller('advController', ['$document', '$filter', '$scope', function($
       if (loc.investments[index][1] < loc.unlocks[index][i][0]) {
         if (i + n - 1 < loc.unlocks[index].length) {
           retVal = loc.unlocks[index][i + n - 1][0];
+          if (loc.unlocks[index][i + n - 1][1][1] < 1 && retVal > 0)
+            --retVal;
           break;
         }
       }
