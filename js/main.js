@@ -68,7 +68,7 @@ advApp.filter('num', function() {
 advApp.filter('percentage', function() {
   return function(input) {
     if (isNaN(input)) return input;
-    return Math.floor(input * 1000) / 10 + '%';
+    return Math.floor(input * 10000) / 100 + '%';
   };
 });
 
