@@ -1206,7 +1206,7 @@ advApp.controller('advController', ['$document', '$filter', '$scope', function($
   };
 
   function loadDefaults() {
-    $scope.coins.angelScale = 3; // ?
+    $scope.coins.angelScale = 30;
     $scope.coins.baseCost = [2.5, 5, 7.5, 10, 12.5, 30, 50, 70, 125];
     $scope.coins.basePower = [1.75, 2, 2.25, 2.5, 2.75, 3, 3.5, 4, 4.5];
     $scope.coins.baseProfit = [0.25, 0.75, 1.25, 1.75, 5.25, 15, 36.25, 67.50, 131.25];
